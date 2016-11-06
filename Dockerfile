@@ -8,11 +8,11 @@ RUN apt-get update && \
 
 WORKDIR /opt/fa
 
-COPY unsorted ./unsorted
-COPY setup.py .
 COPY requirements.txt .
-COPY serve.py .
-
 RUN pip install -r requirements.txt
+
+COPY setup.py .
+COPY serve.py .
+COPY unsorted ./unsorted
 
 CMD ["/opt/fa/serve.py"]
