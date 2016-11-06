@@ -51,6 +51,6 @@ class FileRepr:
         return {
             'file': self.file,
             'full_path': self.full_path,
-            'thumbnail': self.thumbnail().replace('unsorted', ''),
+            'thumbnail': self.thumbnail().replace(STATIC_DIR, '/static/'),
             'hash': self.hash
         }
