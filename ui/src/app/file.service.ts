@@ -4,13 +4,13 @@ import 'rxjs/Rx'
 
 @Injectable()
 export class FileService {
-  
+
   constructor(private http: Http) { }
 
   getFiles() {
     let headers = new Headers();
     headers.append('Accept', 'application/json');
-    let url = `http://localhost:5000/unsorted`
+    let url = '/unsorted'
 
     return this.http
       .get(url, { headers })
@@ -23,7 +23,7 @@ export class FileService {
   deleteFile(hash) {
     let headers = new Headers();
     headers.append('Accept', 'application/json');
-    let url = `http://localhost:5000/delete/${hash}`
+    let url = `/delete/${hash}`
 
     return this.http
       .delete(url, { headers })
@@ -35,7 +35,7 @@ export class FileService {
   sortFiles() {
     let headers = new Headers();
     headers.append('Accept', 'application/json');
-    let url = `http://localhost:5000/sort`
+    let url = '/sort'
 
     return this.http
       .post(url, '', { headers })
