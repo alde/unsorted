@@ -6,7 +6,7 @@ logger = logging.getLogger(__name__)
 
 def main():
     logging.basicConfig(level='DEBUG')
-    app.run()
+    app.run(host='0.0.0.0')
 
 
 if __name__ == '__main__':
