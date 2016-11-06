@@ -1,0 +1,22 @@
+<div class="mdl-grid">
+  <div class='mdl-cell mdl-cell--12-col'>
+    <button (click)='sort()' class="sorter mdl-button mdl-js-button mdl-button--raised mdl-button--icon mdl-button--colored">
+      <i class="material-icons">reorder</i>
+    </button>
+  </div>
+  <div *ngFor="let f of files;" class="mdl-cell mdl-cell--4-col">
+    <div class="mdl-card mdl-shadow--4dp">
+      <div class="mdl-card__media">
+        <img src='{{f.thumbnail}}' width="310" height="177" border="0" alt="" style="padding:10px;">
+      </div>
+      <div class="mdl-card__supporting-text">
+        {{f.file}}
+      </div>
+      <div class="mdl-card__actions">
+        <button (click)="delete(f.hash)" class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
+          <i class="material-icons">delete</i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

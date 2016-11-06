@@ -1,0 +1,13 @@
+.tox
+.cache
+.coverage
+__pycache__
+*.egg-info
+*.pyc
+tests-*.xml
+coverage.xml
+htmlcov
+test.db
+.idea
+unsorted/static/*.png
+*.bak
